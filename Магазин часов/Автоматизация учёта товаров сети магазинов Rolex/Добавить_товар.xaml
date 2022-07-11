@@ -1,0 +1,20 @@
+﻿<Window x:Class="Автоматизация_учёта_товаров_сети_магазинов_Rolex.Добавить_товар"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_учёта_товаров_сети_магазинов_Rolex"
+        mc:Ignorable="d"
+        Title="Добавить_товар" Height="279" Width="232">
+    <Grid>
+        <TextBox x:Name="Введите_наименование_товара2" HorizontalAlignment="Left" Height="21" Margin="12,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="Отпускная_цена2" HorizontalAlignment="Left" Height="24" Margin="118,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.143,0.5"/>
+        <Label x:Name="Введите_наименование_товара1" Content="Введите наименование товара" HorizontalAlignment="Left" Margin="12,68,0,0" VerticalAlignment="Top" Width="202" Height="25" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="Отпускная_цена1" Content="Отпускная цена:" HorizontalAlignment="Left" Margin="12,124,0,0" VerticalAlignment="Top" Height="26" Width="101" RenderTransformOrigin="1.659,0.615"/>
+        <Button x:Name="Отмена" Content="Отмена" HorizontalAlignment="Left" Margin="12,192,0,0" VerticalAlignment="Top" Width="202" Height="33" FontSize="18" Click="Отмена_Click"/>
+        <Button x:Name="Добавить_продукцию" Content="Добавить продукцию" HorizontalAlignment="Left" Margin="12,155,0,0" VerticalAlignment="Top" Width="202" Height="32" FontSize="18" Click="Добавить_продукцию_Click"/>
+        <ComboBox x:Name="Выберите_магазин2" HorizontalAlignment="Left" Margin="12,41,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label x:Name="Выберите_магазин1" Content="Выберите категорию продукции:" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="202"/>
+
+    </Grid>
+</Window>

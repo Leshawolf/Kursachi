@@ -1,0 +1,55 @@
+﻿<Window x:Class="Автоматизация_учёта_товаров_сети_магазинов_Rolex.Изменение_клиента"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_учёта_товаров_сети_магазинов_Rolex"
+        mc:Ignorable="d"
+        Title="Изменение_клиента" Height="262" Width="292">
+    <Grid Margin="0,-2,0,2">
+        <TextBox x:Name="ФИО2" HorizontalAlignment="Left" Height="23" Margin="61,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="Логин2" HorizontalAlignment="Left" Height="23" Margin="60,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="Электронный_адрес2" HorizontalAlignment="Left" Height="23" Margin="60,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="60,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Адрес1" Content="Адрес:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="ФИО1" Content="ФИО:" HorizontalAlignment="Left" Margin="16,13,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="Пароль1" Content="Пароль:" HorizontalAlignment="Left" Margin="1,162,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="Логин1" Content="Логин:" HorizontalAlignment="Left" Margin="9,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.174,1.769" Height="26"/>
+        <Label x:Name="Электронный_адрес1" Content="Email:" HorizontalAlignment="Left" Margin="14,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.077" Height="26"/>
+        <TextBox x:Name="Адрес2" HorizontalAlignment="Left" Height="23" Margin="60,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="Пароль2" HorizontalAlignment="Left" Height="23" Margin="60,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"/>
+        <Button x:Name="Отмена" Content="Отмена" HorizontalAlignment="Left" Margin="130,196,0,0" VerticalAlignment="Top" Width="88" Height="26" Background="#FF265F87" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Отмена_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.158"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="Сохранить" Content="Сохранить" HorizontalAlignment="Left" Margin="29,196,0,0" VerticalAlignment="Top" Width="96" Height="26" Background="#FF265F87" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Сохранить_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.158"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="Телефон2" HorizontalAlignment="Left" Height="23" Margin="61,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Text="+375"/>
+        <Label x:Name="Телефон1" Content="Телефон:" HorizontalAlignment="Left" Margin="1,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.077" Height="26"/>
+        <Button x:Name="Изменить" Content="Изменить" HorizontalAlignment="Left" Margin="29,197,0,0" VerticalAlignment="Top" Width="96" Height="26" Background="#FF265F87" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Изменить_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.158"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>

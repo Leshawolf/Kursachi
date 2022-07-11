@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Интернет_магазин" Class="dataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8FRQK4J\SQLEXPRESS;Initial Catalog=Интернет_магазин;Integrated Security=True" SettingsObjectName="Автоматизация_учёта_товаров_сети_магазинов_Rolex.Properties.Settings" SettingsPropertyName="Интернет_магазинConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Заказы" Member="Заказы">
+    <Type Name="Заказы">
+      <Column Name="ID_заказа" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Дата_заказа" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Цена_заказа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_товара" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_покупателя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Покупатели_Заказы" Member="Покупатели" ThisKey="ID_покупателя" OtherKey="ID_покупателя" Type="Покупатели" IsForeignKey="true" />
+      <Association Name="Товары_Заказы" Member="Товары" ThisKey="ID_товара" OtherKey="ID_товара" Type="Товары" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Магазины" Member="Магазины">
+    <Type Name="Магазины">
+      <Column Name="ID_магазина" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Адрес_магазина" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="Магазины_Товары" Member="Товары" ThisKey="ID_магазина" OtherKey="ID_магазина" Type="Товары" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Покупатели" Member="Покупатели">
+    <Type Name="Покупатели">
+      <Column Name="ID_покупателя" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ФИО" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Адрес" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Контактный_телефон" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="Покупатели_Заказы" Member="Заказы" ThisKey="ID_покупателя" OtherKey="ID_покупателя" Type="Заказы" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Сотрудники" Member="Сотрудники">
+    <Type Name="Сотрудники">
+      <Column Name="ID_сотрудника" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Логин" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Пароль" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ФИО" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Адрес" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Дата_рождения" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Должность" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Контактный_телефон" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Товары" Member="Товары">
+    <Type Name="Товары">
+      <Column Name="ID_товара" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Наименование" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Отпускная_цена" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Розничная_цена" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Статус" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_магазина" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Товары_Заказы" Member="Заказы" ThisKey="ID_товара" OtherKey="ID_товара" Type="Заказы" />
+      <Association Name="Магазины_Товары" Member="Магазины" ThisKey="ID_магазина" OtherKey="ID_магазина" Type="Магазины" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

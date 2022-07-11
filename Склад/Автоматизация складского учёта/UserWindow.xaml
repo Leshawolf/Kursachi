@@ -1,0 +1,161 @@
+﻿<Window x:Class="Автоматизация_складского_учёта.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_складского_учёта"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="451" Width="893" ResizeMode="NoResize" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid Margin="0,0,2,-1" Background="#FFB9B9B9" Height="468" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="882*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Информация" HorizontalAlignment="Left" Height="242" Margin="11,99,0,0" VerticalAlignment="Top" Width="835" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Наименование продукции" Binding="{Binding Наименование}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Категория продукции" Binding="{Binding Категория_продукции}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Количество" Binding="{Binding Количество}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Статус" Binding="{Binding Статус}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Наименование поставщика" Binding="{Binding Наименование1}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Цена поставки" Binding="{Binding Цена_поставки}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Дата поставки" Binding="{Binding Дата_поставки}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Наименование заказчика" Binding="{Binding Наименование2}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Цена заказа" Binding="{Binding Цена_заказа}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Дата заказа" Binding="{Binding Дата_заказа}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Цена выручки" Binding="{Binding Цена_выручки}">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Отчёт" Content="Отчёт по &#xD;&#xA;состоянию слада" HorizontalAlignment="Left" Margin="711,56,0,0" VerticalAlignment="Top" Width="135" Click="Отчёт_Click" Height="40" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFC9898" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="Поиск3" HorizontalAlignment="Left" Margin="13,40,0,0" VerticalAlignment="Top" Width="273" Height="22" SelectionChanged="Поиск3_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFD88282" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="Поиск2" Content="Поиск" HorizontalAlignment="Left" Margin="178,9,0,0" VerticalAlignment="Top" Width="108" Height="27" Click="Поиск2_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFEE9090" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Добавить_поставку" Content="Добавить&#xD;&#xA;поставку" HorizontalAlignment="Left" Margin="11,355,0,0" VerticalAlignment="Top" Width="135" Height="40" RenderTransformOrigin="0.758,0.425" Click="Добавить_поставку_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Изменить_поставку" Content="Изменить&#xD;&#xA;поставку" HorizontalAlignment="Left" Margin="151,355,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Изменить_поставку_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Удалить_поставку" Content="Удалить &#xD;&#xA;поставку" HorizontalAlignment="Left" Margin="291,355,0,0" VerticalAlignment="Top" Width="135" Height="40" RenderTransformOrigin="0.758,0.425" Click="Удалить_поставку_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Добавить_заказ" Content="Добавить&#xA;заказ" HorizontalAlignment="Left" Margin="431,355,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Добавить_заказ_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Изменить_заказ" Content="Изменить&#xD;&#xA;заказ" HorizontalAlignment="Left" Margin="571,355,0,0" VerticalAlignment="Top" Width="135" Height="40" RenderTransformOrigin="0.758,0.425" Click="Изменить_заказ_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Удалить_заказ" Content="Удалить &#xD;&#xA;заказ" HorizontalAlignment="Left" Margin="711,355,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Удалить_заказ_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF9A9A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="Поиск4" HorizontalAlignment="Left" Height="21" Margin="13,65,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="273"/>
+        <Button x:Name="Окно_администратора" Content="Окно администратора" HorizontalAlignment="Left" Margin="562,9,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Окно_администратора_Click" FontStyle="Italic" Visibility="Hidden">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFF29292" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Поиск1" Content="Выберите  тип поиска:" HorizontalAlignment="Left" Margin="13,9,0,0" VerticalAlignment="Top" Width="133"/>
+        <ComboBox x:Name="Статус" HorizontalAlignment="Left" Margin="13,65,0,0" VerticalAlignment="Top" Width="273" Height="21" SelectionChanged="Статус_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFD88282" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="Обновить" Content="Обновить" HorizontalAlignment="Left" Margin="562,56,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Обновить_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFF59494" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Выход" Content="Выход" HorizontalAlignment="Left" Margin="711,10,0,0" VerticalAlignment="Top" Width="135" Height="40" Click="Выход_Click" Foreground="Black" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFC9898" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

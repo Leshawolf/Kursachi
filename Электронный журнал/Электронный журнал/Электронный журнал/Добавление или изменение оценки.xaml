@@ -1,0 +1,52 @@
+﻿<Window x:Class="Project_Zero.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Zero"
+        mc:Ignorable="d"
+        Title="Добавление или изменение оценки" Height="240.628" Width="372.672" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="Кабинет.jpg"/>
+    </Window.Background>
+    <Grid>
+        <TextBlock x:Name="Предмет" HorizontalAlignment="Left" Margin="48,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="69"><Run Text="Предметы"/><Run Text=":"/></TextBlock>
+        <ComboBox x:Name="Subject" HorizontalAlignment="Left" Margin="117,69,0,0" VerticalAlignment="Top" Width="141">
+            <TextBlock><Run Text="БДиСУБД"/></TextBlock>
+            <TextBlock><Run Text="КПиЯП"/></TextBlock>
+            <TextBlock><Run Text="Компьютерные сети"/></TextBlock>
+            <TextBlock><Run Text="ПРСПО"/></TextBlock>
+            <TextBlock><Run Text="АУДО"/></TextBlock>
+            <TextBlock><Run Text="ПССIП"/></TextBlock>
+            <TextBlock><Run Text="ТиОПО"/></TextBlock>
+            <TextBlock><Run Text="ФКиЗ"/></TextBlock>
+            <TextBlock><Run Text="Матмод"/></TextBlock>
+            <TextBlock><Run Text="ЗКИ"/></TextBlock>
+            <TextBlock><Run Text="ТРПО"/></TextBlock>
+            <TextBlock><Run Text="ОП"/></TextBlock>
+        </ComboBox>
+        <Button x:Name="Alter" Content="Изменить оценку" HorizontalAlignment="Left" Margin="117,123,0,0" VerticalAlignment="Top" Width="141" Click="Alter_Click"/>
+        <TextBlock x:Name="Оценка" HorizontalAlignment="Left" Margin="70,96,0,0" TextWrapping="Wrap" Text="Оценка" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Mark" HorizontalAlignment="Left" Margin="117,96,0,0" VerticalAlignment="Top" Width="141">
+            <TextBlock><Run Text="0"/></TextBlock>
+            <TextBlock><Run Text="1"/></TextBlock>
+            <TextBlock><Run Text="2"/></TextBlock>
+            <TextBlock><Run Text="3"/></TextBlock>
+            <TextBlock><Run Text="4"/></TextBlock>
+            <TextBlock><Run Text="5"/></TextBlock>
+            <TextBlock><Run Text="6"/></TextBlock>
+            <TextBlock><Run Text="7"/></TextBlock>
+            <TextBlock><Run Text="8"/></TextBlock>
+            <TextBlock><Run Text="9"/></TextBlock>
+            <TextBlock><Run Text="10"/></TextBlock>
+            <TextBlock><Run Text=""/></TextBlock>
+        </ComboBox>
+        <TextBlock x:Name="Дата" Margin="75,43,248,0" TextWrapping="Wrap" Text="Дата:" VerticalAlignment="Top" Height="21"/>
+        <ComboBox x:Name="Date" HorizontalAlignment="Left" Margin="117,42,0,0" VerticalAlignment="Top" Width="141" IsEnabled="False">
+        </ComboBox>
+        <TextBlock x:Name="Предмет_Copy" HorizontalAlignment="Left" Margin="57,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="60"><Run Text="Студент"/><Run Text=":"/></TextBlock>
+        <ComboBox x:Name="Student" HorizontalAlignment="Left" Margin="117,15,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="Student_SelectionChanged"/>
+    </Grid>
+</Window>

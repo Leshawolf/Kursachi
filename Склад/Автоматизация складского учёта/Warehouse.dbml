@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Склад" Class="WarehouseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8FRQK4J\SQLEXPRESS;Initial Catalog=Склад;Integrated Security=True" SettingsObjectName="Автоматизация_складского_учёта.Properties.Settings" SettingsPropertyName="СкладConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Заказчики" Member="Заказчики">
+    <Type Name="Заказчики">
+      <Column Name="ID_заказчика" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Наименование" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Адрес" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Телефон" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="Заказчики_Заказы" Member="Заказы" ThisKey="ID_заказчика" OtherKey="ID_заказчика" Type="Заказы" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Заказы" Member="Заказы">
+    <Type Name="Заказы">
+      <Column Name="ID_заказа" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Дата_заказа" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Цена_заказа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_продукции" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_заказчика" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_работника" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Заказчики_Заказы" Member="Заказчики" ThisKey="ID_заказчика" OtherKey="ID_заказчика" Type="Заказчики" IsForeignKey="true" />
+      <Association Name="Работники_Заказы" Member="Работники" ThisKey="ID_работника" OtherKey="ID_работника" Type="Работники" IsForeignKey="true" />
+      <Association Name="Продукции_Заказы" Member="Продукции" ThisKey="ID_продукции" OtherKey="ID_продукции" Type="Продукции" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Категории_продукции" Member="Категории_продукции">
+    <Type Name="Категории_продукции">
+      <Column Name="ID_категории" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Категория_продукции" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Категории_продукции_Продукции" Member="Продукции" ThisKey="ID_категории" OtherKey="ID_категории" Type="Продукции" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Поставки" Member="Поставки">
+    <Type Name="Поставки">
+      <Column Name="ID_поставки" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Дата_поставки" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Цена_поставки" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_поставщика" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Поставщики_Поставки" Member="Поставщики" ThisKey="ID_поставщика" OtherKey="ID_поставщика" Type="Поставщики" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Поставщики" Member="Поставщики">
+    <Type Name="Поставщики">
+      <Column Name="ID_поставщика" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Наименование" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Адрес" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Телефон" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Поставщики_Поставки" Member="Поставки" ThisKey="ID_поставщика" OtherKey="ID_поставщика" Type="Поставки" />
+      <Association Name="Поставщики_Продукции" Member="Продукции" ThisKey="ID_поставщика" OtherKey="ID_поставщика" Type="Продукции" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Работники" Member="Работники">
+    <Type Name="Работники">
+      <Column Name="ID_работника" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ФИО" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Адрес" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Дата_рождения" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Должность" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Мобильный_телефон" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Домашний_телефон" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Работники_Заказы" Member="Заказы" ThisKey="ID_работника" OtherKey="ID_работника" Type="Заказы" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Продукции" Member="Продукции">
+    <Type Name="Продукции">
+      <Column Name="ID_продукции" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Цена_выручки" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Наименование" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Количество" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Статус" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_поставщика" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_категории" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Продукции_Заказы" Member="Заказы" ThisKey="ID_продукции" OtherKey="ID_продукции" Type="Заказы" />
+      <Association Name="Категории_продукции_Продукции" Member="Категории_продукции" ThisKey="ID_категории" OtherKey="ID_категории" Type="Категории_продукции" IsForeignKey="true" />
+      <Association Name="Поставщики_Продукции" Member="Поставщики" ThisKey="ID_поставщика" OtherKey="ID_поставщика" Type="Поставщики" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Электронный_журнал" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8FRQK4J\SQLEXPRESS;Initial Catalog=Электронный_журнал;Integrated Security=True" SettingsObjectName="Project_Zero.Properties.Settings" SettingsPropertyName="Электронный_журналConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Пользователь" Member="Пользователь">
+    <Type Name="Пользователь">
+      <Column Name="ID_пользователя" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ФИО" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Группа" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Электронный_адрес" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Логин" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Дата_рождения" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Статус" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Оценка" Member="Оценка">
+    <Type Name="Оценка">
+      <Column Name="ID_оценки" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Дата_оценки" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="БДиСУБД" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="КПиЯП" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Комьютерные_сети" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ПРСПО" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="АУДО" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ПССIП" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ТиОПО" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ФКиЗ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Матмод" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ЗКИ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ТРПО" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ОП" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_пользователя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Автовокзал" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8FRQK4J\SQLEXPRESS;Initial Catalog=Автовокзал;Integrated Security=True" SettingsObjectName="Железнодорожные_переезды.Properties.Settings" SettingsPropertyName="АвтовокзалConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Билет" Member="Билет">
+    <Type Name="Билет">
+      <Column Name="Номер_билета" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Номер_маршрута" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Место_отправления" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Место_прибытия" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ФИО_пассажира" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Дата_отправления" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Номер_места" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Маршрут_Билет" Member="Маршрут" ThisKey="Номер_маршрута" OtherKey="Номер_маршрута" Type="Маршрут" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Маршрут" Member="Маршрут">
+    <Type Name="Маршрут">
+      <Column Name="Номер_маршрута" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Путь" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="Маршрут_Билет" Member="Билет" ThisKey="Номер_маршрута" OtherKey="Номер_маршрута" Type="Билет" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Вокзал" Member="Вокзал">
+    <Type Name="Вокзал">
+      <Column Name="ID_вокзала" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Город" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

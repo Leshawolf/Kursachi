@@ -1,0 +1,42 @@
+﻿<Window x:Class="Автоматизация_складского_учёта.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_складского_учёта"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="494" Width="520.5">
+    <Grid Margin="1,2,-1,-2">
+        <Button x:Name="Добавить_поставщика" Content="Добавить поставщика" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Добавить_поставщика_Click"/>
+        <Button x:Name="Добавить_работника" Content="Добавить работника" HorizontalAlignment="Left" Margin="364,10,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Добавить_работника_Click"/>
+        <Button x:Name="Добавить_заказчика" Content="Добавить заказчика" HorizontalAlignment="Left" Margin="198,10,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Добавить_заказчика_Click"/>
+        <TextBox x:Name="Введите_адрес2" HorizontalAlignment="Left" Height="22" Margin="26,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.813,1.523"/>
+        <TextBox x:Name="Введите_наименование2" HorizontalAlignment="Left" Height="22" Margin="27,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
+        <TextBox x:Name="Введите_телефон2" HorizontalAlignment="Left" Height="22" Margin="26,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="Введите_электронный_адрес2" HorizontalAlignment="Left" Height="22" Margin="25,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
+        <TextBox x:Name="Введите_домашний_телефон2" HorizontalAlignment="Left" Height="22" Margin="312,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" RenderTransformOrigin="0.813,1.523"/>
+        <TextBox x:Name="Введите_дату_рождения2" HorizontalAlignment="Left" Height="22" Margin="312,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="Введите_должность2" HorizontalAlignment="Left" Height="22" Margin="312,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <Button x:Name="Сохранить" Content="Сохранить" HorizontalAlignment="Left" Margin="136,411,0,0" VerticalAlignment="Top" Width="124" Height="36" Click="Сохранить_Click"/>
+        <Button x:Name="Отмена" Content="Отмена" HorizontalAlignment="Left" Margin="290,411,0,0" VerticalAlignment="Top" Width="120" Height="36" Click="Отмена_Click"/>
+        <Label x:Name="Введите_домашний_телефон1" Content="Введите домашний телефон:" HorizontalAlignment="Left" Margin="312,231,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Введите_телефон1" Content="Введите телефон:" HorizontalAlignment="Left" Margin="26,289,0,0" VerticalAlignment="Top" Height="26" Width="109"/>
+        <Label x:Name="Введите_должность1" Content="Введите должность:" HorizontalAlignment="Left" Margin="312,289,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Введите_наименование1" Content="Введите наименование:" HorizontalAlignment="Left" Margin="27,173,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="Введите_электронный_адрес1" Content="Введите электронный адрес:" HorizontalAlignment="Left" Margin="26,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.395,4.731"/>
+        <Label x:Name="Введите_адрес1" Content="Введите адрес:" HorizontalAlignment="Left" Margin="27,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,1.615" Height="26" Width="98"/>
+        <Label Content="Введите ФИО:" HorizontalAlignment="Left" Margin="59,165,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="Введите_дату_рождения1" Content="Введите дату рождения:" HorizontalAlignment="Left" Margin="312,173,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Введите_логин2" HorizontalAlignment="Left" Height="22" Margin="312,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Введите_логин1" Content="Введите логин:" HorizontalAlignment="Left" Margin="312,345,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Изменить_поставщика" Content="Изменить поставщика" HorizontalAlignment="Left" Margin="27,46,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Изменить_поставщика_Click"/>
+        <Button x:Name="Изменить_работника" Content="Изменить работника" HorizontalAlignment="Left" Margin="364,46,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Изменить_работника_Click"/>
+        <Button x:Name="Изменить_заказчика" Content="Изменить заказчика" HorizontalAlignment="Left" Margin="198,46,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Изменить_заказчика_Click"/>
+        <Button x:Name="Добавить_поставщика_Copy1" Content="Удалить поставщика" HorizontalAlignment="Left" Margin="27,82,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Удалить_поставщика_Click"/>
+        <Button x:Name="Удалить_работника" Content="Удалить работника" HorizontalAlignment="Left" Margin="364,82,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Удалить_работника_Click"/>
+        <Button x:Name="Удалить_заказчика" Content="Удалить заказчика" HorizontalAlignment="Left" Margin="198,82,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="1.56,-1.3" Height="31" Click="Удалить_заказчика_Click"/>
+        <Label x:Name="Выберите_наименование1" Content="Выберите наименование:" HorizontalAlignment="Left" Margin="27,120,0,0" VerticalAlignment="Top" Height="26" Width="151" Visibility="Hidden"/>
+        <ComboBox x:Name="Выберите_наименование2" HorizontalAlignment="Left" Margin="27,151,0,0" VerticalAlignment="Top" Width="467" Visibility="Hidden" SelectionChanged="Выберите_наименование2_SelectionChanged"/>
+
+    </Grid>
+</Window>

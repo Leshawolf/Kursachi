@@ -1,0 +1,34 @@
+﻿<Window x:Class="Автоматизация_учёта_товаров_сети_магазинов_Rolex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_учёта_товаров_сети_магазинов_Rolex"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Фон.png"/>
+    </Window.Background>
+    <Window.Foreground>
+        <ImageBrush ImageSource="Фон.png"/>
+    </Window.Foreground>
+    <Grid>
+        <TextBox x:Name="Логин2" HorizontalAlignment="Left" Height="28" Margin="314,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" FontSize="20"/>
+        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Margin="261,43,0,0" VerticalAlignment="Top" Height="75" Width="338" FontSize="36" Foreground="Black"/>
+        <Label x:Name="Пароль1" Content="Пароль:" HorizontalAlignment="Left" Margin="314,229,0,0" VerticalAlignment="Top" Height="42" Width="106" FontSize="24"/>
+        <Label x:Name="Логин1" Content="Логин:" HorizontalAlignment="Left" Margin="314,145,0,0" VerticalAlignment="Top" Height="43" Width="93" FontSize="24"/>
+        <Button x:Name="Войти" Content="Войти" HorizontalAlignment="Left" Margin="314,320,0,0" VerticalAlignment="Top" Width="151" Height="38" Background="#FF265F87" Click="Войти_Click" FontSize="24" Foreground="White"/>
+        <Button x:Name="Выход" Content="Выход" HorizontalAlignment="Left" Margin="623,9,0,0" VerticalAlignment="Top" Width="151" Height="38" Background="#FF265F87" Click="Выход_Click" FontSize="24" Foreground="White"/>
+        <PasswordBox x:Name="Пароль2" HorizontalAlignment="Left" Margin="314,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="28" Width="151" FontSize="20"/>
+        <ComboBox x:Name="Тип_аккаунта" HorizontalAlignment="Left" Margin="314,123,0,0" VerticalAlignment="Top" Width="151" Height="28" BorderBrush="#FF265F87" Foreground="Black" SelectionChanged="Тип_аккаунта_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF79D7F6" Offset="0"/>
+                    <GradientStop Color="#FF79D7F6" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="Регистрация" Content="Регистрация" HorizontalAlignment="Left" Margin="623,58,0,0" VerticalAlignment="Top" Width="151" Height="38" Background="#FF265F87" Click="Регистрация_Click" FontSize="24" Foreground="White"/>
+
+    </Grid>
+</Window>

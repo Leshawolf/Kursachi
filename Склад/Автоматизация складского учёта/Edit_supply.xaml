@@ -1,0 +1,26 @@
+﻿<Window x:Class="Автоматизация_складского_учёта.Edit_supply"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Автоматизация_складского_учёта"
+        mc:Ignorable="d"
+        Title="Edit_supply" Height="388.675" Width="240" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="Изменить_продукцию" Content="Изменить продукцию" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="202" Height="32" FontSize="18" Click="Изменить_продукцию_Click"/>
+        <TextBox x:Name="Введите_наименование_продукции2" HorizontalAlignment="Left" Height="21" Margin="10,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="Цена2" HorizontalAlignment="Left" Height="24" Margin="60,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.143,0.5"/>
+        <TextBox x:Name="Количество2" HorizontalAlignment="Left" Height="24" Margin="178,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.879,0.292"/>
+        <ComboBox x:Name="Выберите_категорию_продукции2"   HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label x:Name="Введите_наименование_продукции1" Content="Введите наименование продукции:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="202" Height="26" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="Цена1" Content="Цена:" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Height="26" Width="41" RenderTransformOrigin="0.683,0.462"/>
+        <Label x:Name="Количество1" Content="Количество:" HorizontalAlignment="Left" Margin="100,241,0,0" VerticalAlignment="Top" Height="26" Width="78" RenderTransformOrigin="0.5,-0.077"/>
+        <Label x:Name="Выберите_категорию_продукции1" Content="Выберите категорию продукции:" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="202"/>
+        <ComboBox x:Name="Выберите_поставщика_продукции2" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label x:Name="Выберите_поставщика_продукции1" Content="Выберите поставщика продукции:" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="202" RenderTransformOrigin="0.529,1.808"/>
+        <Button x:Name="Отмена" Content="Отмена" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="202" Height="33" FontSize="18" Click="Отмена_Click"/>
+        <ComboBox x:Name="Выберите_поставку2" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="Выберите_поставку2_SelectionChanged"/>
+        <Label x:Name="Выберите_поставку1" Content="Выберите  поставку:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="202"/>
+
+    </Grid>
+</Window>
